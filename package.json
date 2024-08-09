@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "vitest"
+    "test": "vitest",
+    "dev" : "node main.js"
   },
   "author": "School of Code",
   "license": "ISC",
