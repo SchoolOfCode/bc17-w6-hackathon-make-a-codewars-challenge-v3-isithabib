@@ -6,8 +6,8 @@
 -iterate through the new foods array
 -check if the newFoods.category matches anything in foods.Category (using.find?)
 
-if yes-constinue   if no-ignore
---(ignore new ones for now-potentially be able to add in new categories too?)
+if yes-constinue   if no-throw error
+--(error for new ones for now-potentially be able to add in new categories too?)
 
 -iterate through newFoods.items to see if name exists in existing category
 -if yes- update existing food item quantity by adding new food item quantity

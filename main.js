@@ -1,4 +1,4 @@
-const foods = [
+export const existingFoods = [
     {
       category: "dairy",
       items: [
@@ -22,10 +22,9 @@ const foods = [
     }
   ];
   
-//   console.log(foods);
-console.dir(foods, { depth: null });
+console.dir(existingFoods, { depth: null });
 
-  const newFoods = [
+export const newFoods = [
     {
       category: "dairy",
       items: [
@@ -49,34 +48,8 @@ console.dir(foods, { depth: null });
     },
   ];
 
-function addFoodItems(existingFoods, newFoods) {  // Function to add new food items to the existing array
-    newFoods.forEach(newFoodCategory => {  // Find if the category already exists in the existing foods array
-      const existingCategory = existingFoods.find(
-        food => food.category === newFoodCategory.category
-      );
-  
-      {  // Update existing category with new items or update quantities
-        newFoodCategory.items.forEach(newItem => {
-          const existingItem = existingCategory.items.find(
-            item => item.name === newItem.name
-          );
+export function addFoodItems() {
 
-          if (existingItem) {  // If the item exists, update its quantity
-            existingItem.quantity += newItem.quantity;
-          } 
-          
-          else {  // If the item does not exist, add it to the items array 
-            existingCategory.items.push(newItem);
-          }
-        });
-      } 
-    });
-  };
+};
 
-
-  
-  // Run the function with arrays added into parameters
-  addFoodItems(foods, newFoods);
-  
-  // Display the updated foods array
-  console.dir(foods, { depth: null });
+  addFoodItems(existingFoods, newFoods);
